@@ -156,6 +156,7 @@ export default function createDva(createOpts) {
         if (!_container) {
           _container = document.getElementById(container.indexOf('#') === 0 ? container.substr(1) : container);
         }
+        container = _container;
         invariant(container, `app.start: could not query selector: ${container}`);
       }
 
