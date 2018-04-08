@@ -59,7 +59,7 @@
     "react-router": "^2.8.1",
     "react-router-redux": "https://github.com/pafang/react-router-redux.git#ie",
     "redux": "^3.6.0",
-    "redux-saga": "^0.14.0",
+    "redux-saga": "https://github.com/pafang/redux-saga-ie8.git#ie",
     "warning": "^3.0.0"
   },
   "peerDependencies": {
