@@ -149,7 +149,13 @@ export default function createDva(createOpts) {
     function start(container) {
       // support selector
       if (typeof container === 'string') {
-        container = document.querySelector(container);
+        let _container;
+        if (document.querySelector) {
+          _container = document.querySelector(container);
+        }
+        if (!_container) {
+          _container = document.getElementById(container.indexOf('#') === 0 ? container.substr(1) : container);
+        }
         invariant(container, `app.start: could not query selector: ${container}`);
       }
 
