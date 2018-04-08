@@ -4,9 +4,9 @@
   "description": "React and redux based, lightweight and elm-style framework.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dvajs/dva"
+    "url": "https://github.com/pafang/dva"
   },
-  "homepage": "https://github.com/dvajs/dva",
+  "homepage": "https://github.com/pafang/dva",
   "typings": "./index.d.ts",
   "keywords": [
     "dva",
