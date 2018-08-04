@@ -56,7 +56,8 @@ Sure! We have 100+ projects used with dva, both in Alibaba and out.
 
 ### Is it support IE8?
 
-No.
+~~No.~~
+Yes
 
 ## Next
 

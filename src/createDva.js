@@ -1,8 +1,8 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
-import createSagaMiddleware from 'redux-saga/lib/internal/middleware';
-import * as sagaEffects from 'redux-saga/effects';
+import createSagaMiddleware from 'redux-saga-ie/lib/internal/middleware';
+import * as sagaEffects from 'redux-saga-ie/effects';
 import isPlainObject from 'is-plain-object';
 import invariant from 'invariant';
 import warning from 'warning';
@@ -13,7 +13,7 @@ import {
   takeEveryHelper as takeEvery,
   takeLatestHelper as takeLatest,
   throttleHelper as throttle,
-} from 'redux-saga/lib/internal/sagaHelpers';
+} from 'redux-saga-ie/lib/internal/sagaHelpers';
 import isFunction from 'lodash.isfunction';
 import handleActions from './handleActions';
 import Plugin from './plugin';
@@ -149,7 +149,14 @@ export default function createDva(createOpts) {
     function start(container) {
       // support selector
       if (typeof container === 'string') {
-        container = document.querySelector(container);
+        let _container;
+        if (document.querySelector) {
+          _container = document.querySelector(container);
+        }
+        if (!_container) {
+          _container = document.getElementById(container.indexOf('#') === 0 ? container.substr(1) : container);
+        }
+        container = _container;
         invariant(container, `app.start: could not query selector: ${container}`);
       }
 

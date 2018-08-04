@@ -1,13 +1,12 @@
 {
-  "name": "dva",
+  "name": "ie-dva",
   "version": "1.2.1",
   "description": "React and redux based, lightweight and elm-style framework.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dvajs/dva"
+    "url": "https://github.com/pafang/dva"
   },
-  "homepage": "https://github.com/dvajs/dva",
-  "typings": "./index.d.ts",
+  "homepage": "https://github.com/pafang/dva",
   "keywords": [
     "dva",
     "ant",
@@ -56,15 +55,11 @@
     "isomorphic-fetch": "^2.2.1",
     "lodash.isfunction": "^3.0.8",
     "react-redux": "4.4.x",
-    "react-router": "^2.8.1",
-    "react-router-redux": "^4.0.5",
+    "react-router-tim-ie8": "2.5.1",
+    "react-router-redux-ie2": "4.0.8",
     "redux": "^3.6.0",
-    "redux-saga": "^0.14.0",
+    "redux-saga-ie": "0.14.0",
     "warning": "^3.0.0"
-  },
-  "peerDependencies": {
-    "react": "15.x",
-    "react-dom": "15.x"
   },
   "devDependencies": {
     "babel-cli": "^6.14.0",
@@ -111,10 +106,6 @@
     "fetch.js",
     "mobile.js",
     "index.js",
-    "saga.js",
-    "index.d.ts",
-    "router.d.ts",
-    "fetch.d.ts",
-    "mobile.d.ts"
+    "saga.js"
   ]
 }
